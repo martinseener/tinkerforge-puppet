@@ -22,6 +22,11 @@ class tinkerforge::install::base {
   
   package { 'libusb-1.0-0':
     ensure  => present,
+    require => Package['libudev0'],
+  }
+
+  package { 'libudev0':
+    ensure  => present,
     notify  => Exec['get-brickd'],
   }
   
