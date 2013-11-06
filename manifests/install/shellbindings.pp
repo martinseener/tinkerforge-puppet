@@ -36,7 +36,7 @@ class tinkerforge::install::shellbindings {
 
   exec { 'unpack-shellbindings':
     command     => 'unzip -o /tmp/shellbindings.zip tinkerforge',
-    onlyif      => 'test -f /tmp/shellbindings.zip',
+    onlyif      => 'test ! -f /usr/local/bin/tinkerforge',
     cwd         => '/tmp',
     timeout     => 0,
   } ->
