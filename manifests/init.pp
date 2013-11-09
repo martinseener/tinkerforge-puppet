@@ -16,7 +16,10 @@
 #
 # Copyright 2013 Martin Seener
 #
-class tinkerforge ($additionals = undef) {
+class tinkerforge(
+  $additionals = undef
+  ) inherits tinkerforge::params {
+
   include tinkerforge::install::base
   
   service { 'brickd':

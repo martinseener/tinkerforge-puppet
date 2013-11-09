@@ -6,14 +6,16 @@ It`s also tested to work great with my nagios check which you can find [here](ht
 
 # How to use?
 
-**By now, only 64bit Debian-based Systems are supported but this will be enhanced very soon!**
-
 You can easily clone this repo into your puppet/modules subfolder and then include the class into your nodes like:
 
 * `include tinkerforge` (for the basic brickd installation only)
 * `class { 'tinkerforge': additionals => 'shellbindings' }` (to install brickd and the shell bindings on your system)
 
 You can also add this repository as a submodule in your existing one to stay up to date.
+
+# Supported OS
+
+* Debian and Ubuntu (i386, amd64, armhf)
 
 # Known issues and a bit of a roadmap
 

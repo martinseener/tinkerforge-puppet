@@ -31,6 +31,7 @@ class tinkerforge::install::shellbindings {
     command     => 'wget http://download.tinkerforge.com/bindings/shell/tinkerforge_shell_bindings_latest.zip -O /tmp/shellbindings.zip',
     onlyif      => 'test ! -f /tmp/shellbindings.zip',
     cwd         => '/tmp',
+    path        => $env_path,
     timeout     => 0,
   } ->
 
@@ -38,6 +39,7 @@ class tinkerforge::install::shellbindings {
     command     => 'unzip -o /tmp/shellbindings.zip tinkerforge',
     onlyif      => 'test ! -f /usr/local/bin/tinkerforge',
     cwd         => '/tmp',
+    path        => $env_path,
     timeout     => 0,
   } ->
 
@@ -45,6 +47,7 @@ class tinkerforge::install::shellbindings {
     command     => 'cp /tmp/tinkerforge /usr/local/bin/',
     onlyif      => 'test ! -f /usr/local/bin/tinkerforge',
     cwd         => '/tmp',
+    path        => $env_path,
     timeout     => 0,
   }
 }
