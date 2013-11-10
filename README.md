@@ -13,14 +13,13 @@ You can easily clone this repo into your puppet/modules subfolder and then inclu
 
 You can also add this repository as a submodule in your existing one to stay up to date.
 
-# Supported OS
+# Supported OS and flavours
 
-* Debian and Ubuntu (i386, amd64, armhf)
+* Debian, Ubuntu and Debian-Derivates (all OS capable of handling .deb packages)
+* Supports 32bit, 64bit and ARM (i386, amd64 and armhf)
 
 # Known issues and a bit of a roadmap
 
-By now i only have tested the module on Debian Squeeze and Wheezy where it works great. It also should work out of the Box
-in other Debian-based derivates like Ubuntu or Mint.
 Later and on demand i will add support for other Linux distributions, OSX, and Windows.
 
 Also if you need another binding or other additionals like the Brick Viewer, just open an Issue.
